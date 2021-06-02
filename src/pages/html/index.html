@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/indexStyle.css">
     <title>Book Finder</title>
-
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
     body, html {
-        background-color: deepskyblue;
+        background-color: rgb(63, 78, 146);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -26,14 +24,15 @@
 
     h1 {
         font-size: 60px;
-        color: rgb(113, 32, 218);
-        margin-bottom: -10px;
+        color: rgb(70, 226, 161);
+        margin-bottom: 20px;
         font-family: 'Caveat', cursive;
     }
 
     input {
         width: 100%;
-        font-size: 25px;
+        font-size: 23px;
+        border-radius: 0.5ch;
     }
 
     footer {
@@ -48,10 +47,28 @@
         font-size: 20px;
     }
 
-    #all {
-        background-color: crimson;
-        width: 500px;
-        height: fit-content;
+    button {
+        font-size: 20px;
+        background-color: transparent;
+        background-repeat: no-repeat;
+        border: none;
+        overflow: hidden;
+        outline: none;
+        color: rgb(70, 226, 161);
+        font-weight: bold;
+        width: 90px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        transition: 0.5s;
+        background-color: rgb(58, 53, 82);
+        border-radius: 1ch;
+    }
+
+    #div-main {
+        width: 100%;
+        height: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -61,31 +78,34 @@
     }
 
     #book-list {
-        background-color: rgb(203, 166, 219);
-        width: 500px;
-        height: 50%;
+        width: 90%;
+        height: 90%;
         display: flex;
-        flex-direction: column;
         align-items: center;
         margin: auto;
         margin-top: 5px;
-        flex-wrap: wrap;
+        flex-flow: column wrap;
+        font-size: 25px;
+        color: white;
+    }
+
+    #div-searchbar {
+        display: flex;
+        width: 450px;
     }
 
 </style>
-
 </head>
 <body>
-    <link rel="icon" href="https://www.iconsdb.com/icons/preview/royal-blue/book-xxl.png">
-    
-    <h1>Book Finde</h1>
-    <div id="all">
-        <input type="text" name="search" id="search" placeholder="Search for author, book title, subject...">
+    <h1>Book Finder</h1>
+    <div id="div-main">
+        <div id="div-searchbar">
+            <input type="text" name="search" id="search" placeholder="Search for author, book title, subject...">
+            <button>Search</button>
+        </div>
 
         <div id="book-list">
-            <p>Nothing here yet...</p>
-            <p>Nothing here yet...</p>
-            <p>Nothing here yet...</p>
+            Nothing here yet...
         </div>
     </div>
 
