@@ -35,6 +35,15 @@
         border-radius: 0.5ch;
     }
 
+    a {
+        color: white;
+        text-decoration: none;
+    }
+
+    a:hover {
+        color: rgb(70, 226, 161);
+    }
+
     footer {
         display: flex;
         align-items: center;
@@ -45,6 +54,7 @@
         height: 100px;
         color: white;
         font-size: 20px;
+        flex-direction: column;
     }
 
     button {
@@ -112,20 +122,21 @@
     <div id="div-main">
         <div id="div-searchbar">
             <form action="/" method="POST">
-                <input type="text" name="search" id="search" placeholder="Search for author, book title, subject...">
+                <input type="text" name="search" id="search" required placeholder="Search for author, book title, subject...">
                 <button id="btn-search" type="submit">Search</button>
             </form>
         </div>
 
         <div id="book-list">
-            Nothing here yet...
+            
         </div>
     </div>
 
     <footer>
-        All rights reserved <br>
-        &#169;Nícolas Conterato Soares
+        All rights reserved
+        <a href="https://github.com/Nicolas-Soares">&#169; Nícolas Conterato Soares</a> 
     </footer>
-    <script src="/js/seila.js"></script>
+
+    <script src="../js/getDOM.js"></script>
 </body>
 </html>

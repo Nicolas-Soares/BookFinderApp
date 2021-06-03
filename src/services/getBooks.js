@@ -41,6 +41,6 @@ module.exports = {
             itemList.push(item)
         }
 
-        return res.json(itemList)
+        return itemList
     }
 }
