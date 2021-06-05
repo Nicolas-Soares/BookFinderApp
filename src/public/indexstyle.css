@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
-    <title>Book Finder</title>
-<style>
-    @import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
     body, html {
@@ -115,27 +106,3 @@
         display: flex;
         width: 450px;
     }
-
-</style>
-</head>
-<body>
-    <h1>Book Finder</h1>
-    <div id="div-main">
-        <div id="div-searchbar">
-            <form action="/" method="POST">
-                <input type="text" name="search" id="search" required placeholder="Search for author, book title, subject...">
-                <button id="btn-search" type="submit">Search</button>
-            </form>
-        </div>
-
-        <div id="book-list">
-            {{tickets}}
-        </div>
-    </div>
-
-    <footer>
-        All rights reserved
-        <a href="https://github.com/Nicolas-Soares">&#169; Nícolas Conterato Soares</a> 
-    </footer>
-</body>
-</html>
