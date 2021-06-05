@@ -4,6 +4,7 @@ async function insertBooks(req, res) {
     const itemList = await getBooks(req, res)
     console.log(itemList)
     res.render('hello', {
+        itemList: itemList,
         title: itemList[0].title,
         authors: itemList[0].authors,
         publishedDate: itemList[0].publishedDate,

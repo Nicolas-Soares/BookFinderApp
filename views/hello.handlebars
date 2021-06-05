@@ -1,7 +1,11 @@
+<div id="book-list">
+{{#each itemList}}
 <div class="bookItem">
-    <b>{{title}}</b><br>
-    <b>Authors: </b>{{authors}}<br>
-    <b>Published Date: </b>{{publishedDate}}<br>
-    <b>Preview: </b>{{previewLink}}<br>
+    <p><b>{{title}}</b></p>
+    <b>Authors: </b>{{authors}}
+    <b>Published Date: </b>{{publishedDate}}
+    <b>Preview: </b><a href="{{previewLink}}">More information here!</a>
     <img src="{{imageLink}}" alt="Book Image">
+</div><br>
+{{/each}}
 </div>

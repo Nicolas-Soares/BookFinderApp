@@ -38,6 +38,7 @@
     a {
         color: white;
         text-decoration: none;
+        width: fit-content;
     }
 
     a:hover {
@@ -55,6 +56,8 @@
         color: white;
         font-size: 20px;
         flex-direction: column;
+        position: absolute;
+        bottom: 0px;
     }
 
     button {
@@ -90,6 +93,7 @@
     img {
         width: 185px;
         height: 230px;
+        flex: 1;
     }
 
     #div-main {
@@ -105,12 +109,12 @@
 
     #book-list {
         width: 90%;
-        height: 90%;
+        
         display: flex;
         align-items: center;
         margin: auto;
         margin-top: 5px;
-        flex-flow: column wrap;
+        flex-flow: row wrap;
         font-size: 25px;
         color: white;
         background-color: rgba(220, 20, 60, 0.404);
@@ -122,10 +126,15 @@
     }
 
     .bookItem {
-        background-color: rgba(70, 226, 161, 0.15);
-        width: 75%;
-        height: 300px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+
+        background-color: rgba(70, 226, 161, 0.233);
+        width: 50%;
+        height: 250px;
         font-size: 20px;
+        margin-bottom: 5px;
     }
 
 </style>
@@ -139,10 +148,7 @@
                 <button id="btn-search" type="submit">Search</button>
             </form>
         </div>
-
-        <div id="book-list">
-            {{{body}}}
-        </div>
+        {{{body}}}
     </div>
 
     <footer>
