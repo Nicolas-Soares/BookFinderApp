@@ -31,7 +31,7 @@ https://user-images.githubusercontent.com/71686515/120913153-2df89c00-c66b-11eb-
 
 -----
 
-## Link úteis
+## Links úteis
 
 [GoogleBooksAPI](https://developers.google.com/books/docs/overview)
 
