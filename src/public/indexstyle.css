@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Padauk&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
 body, html {
     background-color: rgb(63, 78, 146);
     display: flex;
@@ -14,10 +15,16 @@ body, html {
 }
 
 h1 {
+    transition: 0.5s;
     font-size: 60px;
     color: rgb(70, 226, 161);
     margin-bottom: 20px;
     font-family: 'Caveat', cursive;
+}
+
+h1:hover {
+    transition: 0.5s;
+    color: rgb(40, 170, 116);
 }
 
 input {
@@ -54,6 +61,7 @@ footer {
 }
 
 button {
+    transition: 0.5s;
     font-size: 20px;
     background-color: transparent;
     background-repeat: no-repeat;
@@ -102,19 +110,6 @@ img {
     font-size: 30px;
 }
 
-#book-list {
-    width: 90%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: auto;
-    margin-top: 5px;
-    flex-flow: column wrap;
-    font-size: 25px;
-    color: white;
-    background-color: rgba(220, 20, 60, 0.404);
-}
-
 #div-searchbar {
     display: flex;
     flex-direction: column;
@@ -130,7 +125,6 @@ img {
     flex-direction: column;
     word-break: break-all;
     max-width: 80%;
-    min-width: 80%;
     height: fit-content;
     overflow-wrap: break-word;
     margin: 3px;
@@ -143,16 +137,23 @@ img {
     flex-direction: row;
     flex-wrap: nowrap;
     background-color: rgb(83, 77, 104);
-    
-    width: 50%;
-    max-width: 50%;
-    min-width: 50%;
-
+    width: 60%;
     height: fit-content;
+    min-height: fit-content;
     font-size: 17px;
     margin-top: 10px;
     margin-bottom: 10px;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     border-radius: 1ch;
+}
+
+@media only screen and (max-width: 980px) {
+    .bookItem {
+        flex-direction: column;
+    }
+
+    #book-info {
+        align-items: center;
+    }
 }
