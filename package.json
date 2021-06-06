@@ -5,7 +5,8 @@
   "author": "Nicolas Conterato Soares <nicksoares3658@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "nodemon ./src/app.js"
+    "dev": "nodemon ./src/app.js",
+    "start": "node ./src/app.js"
   },
   "dependencies": {
     "axios": "^0.21.1",
