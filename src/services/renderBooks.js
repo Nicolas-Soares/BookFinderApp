@@ -1,11 +1,11 @@
 const { getBooks } = require('./getBooks')
 
-async function insertBooks(req, res) {
+async function renderBooks(req, res) {
     try {
-        const itemList = await getBooks(req, res)
-        console.log(itemList)
+        const { search } = req.query
+        const itemList = await getBooks(search)
 
-        res.render('hello', {
+        res.render('info', {
             itemList: itemList,
             title: itemList[0].title,
             authors: itemList[0].authors,
@@ -20,4 +20,4 @@ async function insertBooks(req, res) {
     }
 }
 
-module.exports = { insertBooks }
+module.exports = { renderBooks }

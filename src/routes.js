@@ -1,14 +1,13 @@
 const express = require('express')
 const path = require('path')
-const { insertBooks } = require('./services/insertBooks.js')
+const { renderBooks } = require('./services/renderBooks.js')
 
 const routes = express.Router()
 
 routes.get('/', function (req, res) {
-    //res.sendFile(path.join(__dirname + '/public/html/index.html'))
-    res.render('hello')
+    res.render('info')
 })
 
-routes.post('/', insertBooks)
+routes.get('/search', renderBooks)
 
 module.exports = routes

@@ -11,19 +11,19 @@
     <h1>Book Finder</h1>
     <div id="div-main">
         <div id="div-searchbar">
-            <form action="/" method="POST">
+            <form action="/search" method="GET">
                 <input type="text" name="search" id="search" required placeholder="Search for author, book title, subject...">
                 <button id="btn-search" type="submit">Search</button>
             </form>
         </div>
-        <div id="book-list">
+        
             {{{body}}}
-        </div>
+        
     </div>
-
     <footer>
         All rights reserved
         <a href="https://github.com/Nicolas-Soares">&#169; Nícolas Conterato Soares</a> 
     </footer>
+
 </body>
 </html>

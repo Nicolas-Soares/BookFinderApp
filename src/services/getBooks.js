@@ -2,8 +2,11 @@ const axios = require('axios')
 const URL = 'https://www.googleapis.com/books/v1/volumes?q='
 
 module.exports = {
-    async getBooks(req, res) {
-        const { search } = req.body
+    async getBooks(search) {
+        if (!search) {
+            return []
+        }
+
         const url = `${URL}${search.replace(/ +/g, '')}&key=AIzaSyDIND63Uyj-oFt1p1efn1EpVjNVMaP2lz0`
         const response = await axios.get(url)
         const filtered = response.data.items.slice(0, 10)
